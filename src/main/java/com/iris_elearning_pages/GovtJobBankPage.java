@@ -6,7 +6,6 @@ import org.openqa.selenium.support.FindBy;
 
 
 public class GovtJobBankPage {
-	HomePage home = new HomePage();
 
 	
 	@FindBy(css = "")
