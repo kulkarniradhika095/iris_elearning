@@ -9,7 +9,7 @@ import com.iris_elearning_pages.LoginPage;
 
 public class LoginPageTests extends TestBase{
 	@Test
-	public static void verifyloginDetails() throws InterruptedException {
+	public static void verifyloginDetails() {
 		UserInterfaceKeywords.launchUrl(Environment.URL);
 		LoginPage Login = new LoginPage();
 		Login.clickOnSignInButton();
