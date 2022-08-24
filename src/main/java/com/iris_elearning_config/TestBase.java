@@ -16,6 +16,6 @@ public class TestBase {
 	
 	@AfterMethod
 	public void tearDown() {
-		UserInterfaceKeywords.driver.quit();
+		UserInterfaceKeywords.driver.close();
 	}
 }

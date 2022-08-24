@@ -1,6 +1,8 @@
 package com.iris_elearing_keywords;
 
 import org.apache.log4j.Logger;
+
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -12,12 +14,10 @@ import com.iris_elearing_util.PropUtil;
 import com.iris_elearing_util.WaitFor;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import ru.yandex.qatools.ashot.AShot;
-import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
-import ru.yandex.qatools.ashot.shooting.ShootingStrategy;
-import ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator;
 
 public class UserInterfaceKeywords {
+	
+	
 	static PropUtil prop = new PropUtil();
 	public static RemoteWebDriver driver;
 	private static final Logger log = Logger.getLogger(UserInterfaceKeywords.class);
@@ -53,7 +53,7 @@ public class UserInterfaceKeywords {
 	public static void click(WebElement element) {
 		element.click();
 	}
-
+	
 	public static void switchUrlFB(String urlFacebook) {
 		driver.get(urlFacebook);
 		log.info("Facebook page has been loaded successfully..!");
