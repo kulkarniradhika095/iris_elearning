@@ -70,5 +70,15 @@ public class UserInterfaceKeywords {
 		WaitFor.elementToBeClickable(element);
 		element.click();
 	}
+
+	public static boolean display(WebElement element) {
+		return element.isDisplayed();
+		
+	}
+
+	public static void sendkey(WebElement element) {
+		element.sendKeys();
+		
+	}
 	
 }
