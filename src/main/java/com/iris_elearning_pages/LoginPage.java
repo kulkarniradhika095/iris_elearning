@@ -68,43 +68,54 @@ private static final Logger log = Logger.getLogger(LoginPage.class);
 	}
 	public void enterEmail() {
 		UserInterfaceKeywords.sendKeys(emailTextBox, "reg_Email");
+		log.info("Email entered");
 	}
 
 	public void enterPassword() {
 		UserInterfaceKeywords.sendKeys(passwordTextBox, "password");
+		log.info("Password entered");
 	}
 
 	public void clickOnLoginButton() {
 		WaitFor.elementToBeClickable(loginButton);
 		loginButton.click();
+		log.info("Clicked on loginButton");
 	}
 	public void clickOnContinueWithFacebookButton() {
 		continueWithFacebook.click();
+		log.info("Clicked on continue With Facebook");
 	}
 
 	public void clickOnContinueWithGoogleButton() {
 		continueWithGoogle.click();		
+		log.info("Clicked on continue with google");
 	}
 
 	public void clickOnForgotPasswordButton() {
 		forgotPassword.click();
+		log.info("Clicked on forgot password");
 	}
 
 	public void forgotPasswordEnterEmail() {
 		UserInterfaceKeywords.sendKeys(forgotPasswordEnterEmail, "reg_Email");
+		log.info("Email Entered");
 	}
 
 	public void clickOnSendOtp() {
 		sendOtpButton.click();
+		log.info("Clicked on send Otp");
 	}
 
 	public void checkOtpBox() {
 		WaitFor.elementToBeClickable(otpBox);
 		if (otpBox == null) {
 			resendOtp.click();
+			log.info("Clicked on resend Otp");
 		}else {
 			validteOtp.click();
+			log.info("Clicked on validate Otp");
 		}
+		
 	}
 	
 }

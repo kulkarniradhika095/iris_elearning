@@ -9,8 +9,13 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import com.iris_elearing_util.PropUtil;
+import com.iris_elearing_util.WaitFor;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategy;
+import ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator;
 
 public class UserInterfaceKeywords {
 	static PropUtil prop = new PropUtil();
@@ -57,4 +62,12 @@ public class UserInterfaceKeywords {
 		driver.get(urlGoogle);
 		log.info("Google page has been loaded successfully..!");
 	}
+	
+	public static void scroll(WebElement element) {
+		Actions act = new Actions(driver);
+		act.scrollToElement(element);
+		WaitFor.elementToBeClickable(element);
+		element.click();
+	}
+	
 }
