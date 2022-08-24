@@ -10,4 +10,14 @@ public class HomePage {
 	public WebElement searchBar;
 	@FindBy(xpath = "//img[@src=\"/images/testi-pagi.svg\"]")
 	public WebElement leftRoundArrow;
+	
+	@FindBy(xpath="//div[@id='my-purchased-home-page']")
+	public WebElement myPurchasedcourses;
+	
+	@FindBy(xpath="//div[@class='examm-menu-list visible active']")
+	public WebElement examMenuList;
+	
+	@FindBy(xpath="//img[@class='logo-img']")
+	public WebElement logoimage;
+	
 }

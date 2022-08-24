@@ -34,6 +34,7 @@ public class UserInterfaceKeywords {
 		driver.get(url);
 		log.info(url+" has been launched successfully..!");
 	}
+
 	
 	public static void sendKeys(WebElement element,String key) {
 		 element.sendKeys(prop.getEnvDetails(key));
