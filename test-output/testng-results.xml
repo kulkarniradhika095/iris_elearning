@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
@@ -12,6 +13,36 @@
           </reporter-output>
         </test-method> <!-- m1 -->
       </class> <!-- com.iris_elearning_pages.Allcourses -->
+=======
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-08-24T22:17:59 IST" name="Default suite" finished-at="2022-08-24T22:18:54 IST" duration-ms="54489">
+    <groups>
+    </groups>
+    <test started-at="2022-08-24T22:17:59 IST" name="Default test" finished-at="2022-08-24T22:18:54 IST" duration-ms="54489">
+      <class name="com.iris_elearning_tests.HomePageTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.iris_elearning_tests.HomePageTest@5a45133e]" started-at="2022-08-24T22:18:00 IST" name="setUp" finished-at="2022-08-24T22:18:17 IST" duration-ms="17652" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyallcoursedropdown()[pri:0, instance:com.iris_elearning_tests.HomePageTest@5a45133e]" started-at="2022-08-24T22:18:17 IST" name="verifyallcoursedropdown" finished-at="2022-08-24T22:18:52 IST" duration-ms="34650" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyallcoursedropdown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.iris_elearning_tests.HomePageTest@5a45133e]" started-at="2022-08-24T22:18:52 IST" name="tearDown" finished-at="2022-08-24T22:18:54 IST" duration-ms="1880" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.iris_elearning_tests.HomePageTest -->
+>>>>>>> 61055934bf0cfb7dc49344bebcc9d754bf991222
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
