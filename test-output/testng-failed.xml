@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.iris_elearning_tests.GovtJobBankTests">
+      <class name="com.iris_elearning_tests.HomePageTest">
         <methods>
           <include name="tearDown"/>
-          <include name="verifyResultsforGovtJobExamsBankingTests"/>
+          <include name="verifytheuseracctdetails"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- com.iris_elearning_tests.GovtJobBankTests -->
+      </class> <!-- com.iris_elearning_tests.HomePageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

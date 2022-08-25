@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 
 import com.iris_elearing_keywords.UserInterfaceKeywords;
 import com.iris_elearing_util.Environment;
+import com.iris_elearing_util.WaitFor;
 import com.iris_elearning_config.TestBase;
 import com.iris_elearning_pages.HomePage;
 import com.iris_elearning_pages.LoginPage;
@@ -28,6 +29,20 @@ public class HomePageTest extends TestBase{
 		log.info("clicked on course dropdown");
 	
 	}
+	
+	@Test
+	public void verifytheuseracctdetails() throws InterruptedException {
+		UserInterfaceKeywords.launchUrl(Environment.URL);
+		HomePage hm =new HomePage();
+		LoginPageTests.verifyloginDetails();
+		WaitFor.time(10);
+		hm.hoveronuseracctdropdown();
+		hm.openallLinks();
+		log.info("opened all the links");
+
+	}
+	
+	
 		
 	
 
