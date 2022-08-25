@@ -31,16 +31,26 @@ public class HomePageTest extends TestBase{
 	}
 	
 	@Test
-	public void verifytheuseracctdetails() throws InterruptedException {
+	public void verifylinkforapp() {
 		UserInterfaceKeywords.launchUrl(Environment.URL);
 		HomePage hm =new HomePage();
-		LoginPageTests.verifyloginDetails();
 		WaitFor.time(10);
-		hm.hoveronuseracctdropdown();
-		hm.openallLinks();
-		log.info("opened all the links");
+		hm.enterphoneno();
+		hm.clickOngetlinkbtn();
+		log.info("link received on mobile");
 
 	}
+	
+	@Test
+	public void verifyexamlist() {
+		UserInterfaceKeywords.launchUrl(Environment.URL);
+		HomePage hm =new HomePage();
+		String list=hm.getTextofexplorebyexams();
+		System.out.println(list);
+		
+
+	}
+	
 	
 	
 		

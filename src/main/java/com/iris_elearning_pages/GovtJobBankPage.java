@@ -2,19 +2,28 @@ package com.iris_elearning_pages;
 
 
 import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.support.FindBy;
+
 
 
 public class GovtJobBankPage {
 
+	@FindBy(xpath = "//*[@id=\"app\"]/div/div[1]/div[1]/div/div[3]/div/img")
+	public WebElement allCourses;
 	
-	@FindBy(css = "")
-	public WebElement bankMahaPackTab;
+	public void clickAllCourses() {
+		allCourses.click();
+	}
 	
-	@FindBy(css = "")
+	
+	/*@FindBy(css = "#app > div > div.main-header-wrap > div.dropdown-wrap > div > div > div.subcat-shows > div.inner-course-display > div > ul > li:nth-child(1) > a")
+	public WebElement bankMahaPack;
+	
+	@FindBy(css = "#app > div > div.main-header-wrap > div.dropdown-wrap > div > div > div.subcat-shows > div.inner-course-display > div > ul > li:nth-child(4) > a")
 	public WebElement sbiClerkTab;
 	
-	@FindBy(css = "")
+	@FindBy(css = "#app > div > div.main-header-wrap > div.dropdown-wrap > div > div > div.subcat-shows > div.inner-course-display > div > ul > li:nth-child(7) > a")
 	public WebElement IBPSRRBGBOSO ;
 	
 	@FindBy(css = "")
@@ -144,8 +153,7 @@ public class GovtJobBankPage {
 	public WebElement CoalIndiaLtd;
 	
 	@FindBy(css = "")
-	public WebElement IBPSRRBPOClerk;
-	
+	public WebElement IBPSRRBPOClerk;*/
 	
 	
 	

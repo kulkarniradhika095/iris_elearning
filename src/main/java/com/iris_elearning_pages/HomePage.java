@@ -25,7 +25,7 @@ public class HomePage {
 	@FindBy(xpath="//input[@class='search-input-field ']")
 	public WebElement searchtab;
 	
-	@FindBy(xpath="//*[@id=\"app\"]/div/div[1]/div[1]/div/div[5]/div/div/div")
+	@FindBy(xpath="//a[@style='display: block;']")
 	public WebElement usernamedropdown;
 	
 	@FindBy(xpath="//div[@class='product-type-wrapper']")
@@ -37,7 +37,7 @@ public class HomePage {
 	@FindBy(xpath="//button[@value='Get link']")
 	public WebElement getlinkbtn;
 	
-	@FindBy(tagName="a")
+	@FindBy(xpath="//*[@id=\"app\"]/div/div[1]/div[1]/div/div[5]/div/div/div/button/a")
 	public WebElement alllinks;
 	
 	public static void switchUrl(WebElement element ,String url2) {
@@ -72,13 +72,13 @@ public class HomePage {
 		UserInterfaceKeywords.mouseMove(usernamedropdown);
 	}
 	
-	public void clickOnexplorebyproducts() {
-		UserInterfaceKeywords.click(explorebyproducts);
+	public String getTextofexplorebyexams() {
+		return UserInterfaceKeywords.gettext(exammenu);
 
 	}
 	
 	public void enterphoneno() {
-		phonenumberbox.sendKeys("phonenumber");
+		UserInterfaceKeywords.sendKeys(phonenumberbox, "phonenumber");
 
 	}
 	
@@ -86,10 +86,7 @@ public class HomePage {
 		UserInterfaceKeywords.click(getlinkbtn);
 	}
 	
-	public void openallLinks() throws InterruptedException {
-		UserInterfaceKeywords.clickonlinks(alllinks);
-
-	}
+	
 	}
 	
 

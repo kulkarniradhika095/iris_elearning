@@ -1,6 +1,5 @@
 package com.iris_elearing_keywords;
 
-import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -18,12 +17,10 @@ import com.iris_elearing_util.PropUtil;
 import com.iris_elearing_util.WaitFor;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import ru.yandex.qatools.ashot.AShot;
-import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
-import ru.yandex.qatools.ashot.shooting.ShootingStrategy;
-import ru.yandex.qatools.ashot.shooting.ViewportPastingDecorator;
 
 public class UserInterfaceKeywords {
+	
+	
 	static PropUtil prop = new PropUtil();
 	public static RemoteWebDriver driver;
 	private static final Logger log = Logger.getLogger(UserInterfaceKeywords.class);
@@ -59,7 +56,7 @@ public class UserInterfaceKeywords {
 	public static void click(WebElement element) {
 		element.click();
 	}
-
+	
 	public static void switchUrlFB(String urlFacebook) {
 		driver.get(urlFacebook);
 		log.info("Facebook page has been loaded successfully..!");
@@ -87,22 +84,8 @@ public class UserInterfaceKeywords {
 
 	}
 
-	public static void clickonlinks(WebElement element) throws InterruptedException {
-		WebElement crsdd= driver.findElement(By.xpath("//div[@class='dropdown']"));
-		List<WebElement>links=driver.findElements(By.tagName("a"));
-		for(int i=0; i<links.size(); i++) {
-			String a =Keys.chord(Keys.CONTROL,Keys.ENTER);
-			crsdd.findElements(By.tagName("a")).get(i).sendKeys(a);
-			Thread.sleep(5000L);
-			Set<String> handle=driver.getWindowHandles();
-			Iterator<String> it=handle.iterator();
-			while(it.hasNext()) {
-			driver.switchTo().window(it.next());
-			System.out.println(driver.getTitle());
-			}
-				
-		}
+	public static String gettext(WebElement element) {
+	return element.getText();
 		
 	}
-
 }
