@@ -1,6 +1,9 @@
 package com.iris_elearning_tests;
 
+import java.net.SocketException;
+
 import org.apache.log4j.Logger;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.iris_elearing_keywords.UserInterfaceKeywords;
@@ -31,12 +34,16 @@ public class HomePageTest extends TestBase{
 	}
 	
 	@Test
-	public void verifylinkforapp() {
+	public void verifylinkforapp() throws SocketException {
 		UserInterfaceKeywords.launchUrl(Environment.URL);
 		HomePage hm =new HomePage();
-		WaitFor.time(10);
+		WaitFor.time(3);
 		hm.enterphoneno();
+		WaitFor.time(3);
 		hm.clickOngetlinkbtn();
+		WaitFor.time(3);
+		String errmsg=hm.getTextoferrmsg();
+		Assert.assertEquals("The link has been sent to your mobile number!", errmsg);
 		log.info("link received on mobile");
 
 	}

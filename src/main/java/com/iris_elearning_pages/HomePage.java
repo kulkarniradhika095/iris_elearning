@@ -40,6 +40,9 @@ public class HomePage {
 	@FindBy(xpath="//*[@id=\"app\"]/div/div[1]/div[1]/div/div[5]/div/div/div/button/a")
 	public WebElement alllinks;
 	
+	@FindBy(xpath="//div[@id='error_mobNumber2']")
+	public WebElement errormsg;
+	
 	public static void switchUrl(WebElement element ,String url2) {
 		PropUtil repository = new PropUtil();
 		element.sendKeys(repository.getEnvDetails(url2));
@@ -86,6 +89,10 @@ public class HomePage {
 		UserInterfaceKeywords.click(getlinkbtn);
 	}
 	
+	public String getTextoferrmsg() {
+		return UserInterfaceKeywords.gettext(errormsg);
+
+	}
 	
 	}
 	

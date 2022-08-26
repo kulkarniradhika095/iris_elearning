@@ -6,7 +6,7 @@
       <class name="com.iris_elearning_tests.HomePageTest">
         <methods>
           <include name="tearDown"/>
-          <include name="verifytheuseracctdetails"/>
+          <include name="verifylinkforapp"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- com.iris_elearning_tests.HomePageTest -->
